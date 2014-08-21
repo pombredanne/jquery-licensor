@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "licenses";
+  src:url("../fonts/licenses.eot");
+  src: local('☺'), 
+    url("../fonts/licenses.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/licenses.woff") format("woff"),
+    url("../fonts/licenses.ttf") format("truetype"),
+    url("../fonts/licenses.svg#licenses") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "licenses" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="lic-"],
+[class*=" lic-"]{
+  margin: 0 2px;
+}
+
+[class^="lic-"]:hover,
+[class*=" lic-"]:hover{
+  color: #89D1EC;
+}
+
+[class^="lic-"].sel,
+[class*=" lic-"].sel{
+  color: #1e93bf;
+}
+
+[class^="lic-"]:before,
+[class*=" lic-"]:before {
+  font-family: "licenses" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.lic-c:before{
+  content: "O"
+}
+.lic-cc:before {
+  content: "a";
+}
+.lic-cc-by:before {
+  content: "b";
+}
+.lic-cc-nc:before {
+  content: "c";
+}
+.lic-cc-nd:before {
+  content: "d";
+}
+.lic-cc-pd:before {
+  content: "e";
+}
+.lic-cc-remix:before {
+  content: "f";
+}
+.lic-cc-sa:before {
+  content: "g";
+}
+.lic-cc-share:before {
+  content: "h";
+}
+.lic-cc-zero:before {
+  content: "i";
+}
+.lic-cc-nc-eu:before {
+  content: "j";
+}
+.lic-cc-nc-jp:before {
+  content: "k";
+}
+
+div.avklicensor div{text-align: center;}
+div.avklicensor div span{
+    color: #e5e5e5;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+div.avklicensor-lic{}
+div.avklicensor-sub{}
+
+div.avklicensor div.license{
+    font-size: 10px;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+}
+div.avklicensor div.license a{text-decoration: none;}
