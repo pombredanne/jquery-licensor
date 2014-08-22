@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "All Rights Reserved License"
 lang: en
 categories:
     - en

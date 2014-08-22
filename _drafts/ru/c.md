@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "Знак Все Права Защищены"
 lang: ru
 categories:
     - ru
