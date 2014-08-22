@@ -26,45 +26,45 @@
 
       switch (options.current.toLowerCase()){
         case 'c':
-          $(this).children('span.lic-c').addClass('sel');
+          $(this).children('span.avkl-c').addClass('sel');
           break;
         case 'ccby':
-          $(this).find('span.lic-cc').addClass('sel');
-          $(this).find('span.lic-cc-by').addClass('sel');
+          $(this).find('span.avkl-cc').addClass('sel');
+          $(this).find('span.avkl-cc-by').addClass('sel');
           break;
         case 'ccbysa':
-          $(this).find('span.lic-cc').addClass('sel');
-          $(this).find('span.lic-cc-by').addClass('sel');
-          $(this).find('span.lic-cc-sa').addClass('sel');
+          $(this).find('span.avkl-cc').addClass('sel');
+          $(this).find('span.avkl-cc-by').addClass('sel');
+          $(this).find('span.avkl-cc-sa').addClass('sel');
           break;
         case 'ccbynd':
-          $(this).find('span.lic-cc').addClass('sel');
-          $(this).find('span.lic-cc-by').addClass('sel');
-          $(this).find('span.lic-cc-nd').addClass('sel');
+          $(this).find('span.avkl-cc').addClass('sel');
+          $(this).find('span.avkl-cc-by').addClass('sel');
+          $(this).find('span.avkl-cc-nd').addClass('sel');
           break;
         case 'ccbync':
-          $(this).find('span.lic-cc').addClass('sel');
-          $(this).find('span.lic-cc-by').addClass('sel');
-          $(this).find('span.lic-cc-nc').addClass('sel');
+          $(this).find('span.avkl-cc').addClass('sel');
+          $(this).find('span.avkl-cc-by').addClass('sel');
+          $(this).find('span.avkl-cc-nc').addClass('sel');
           break;
         case 'ccbyncsa':
-          $(this).find('span.lic-cc').addClass('sel');
-          $(this).find('span.lic-cc-by').addClass('sel');
-          $(this).find('span.lic-cc-nc').addClass('sel');
-          $(this).find('span.lic-cc-sa').addClass('sel');
+          $(this).find('span.avkl-cc').addClass('sel');
+          $(this).find('span.avkl-cc-by').addClass('sel');
+          $(this).find('span.avkl-cc-nc').addClass('sel');
+          $(this).find('span.avkl-cc-sa').addClass('sel');
           break;
         case 'ccbyncnd':
-          $(this).find('span.lic-cc').addClass('sel');
-          $(this).find('span.lic-cc-by').addClass('sel');
-          $(this).find('span.lic-cc-nc').addClass('sel');
-          $(this).find('span.lic-cc-nd').addClass('sel');
+          $(this).find('span.avkl-cc').addClass('sel');
+          $(this).find('span.avkl-cc-by').addClass('sel');
+          $(this).find('span.avkl-cc-nc').addClass('sel');
+          $(this).find('span.avkl-cc-nd').addClass('sel');
           break;
         case 'cczero':
-          $(this).find('span.lic-cc-zero').addClass('sel');
+          $(this).find('span.avkl-cc-zero').addClass('sel');
           break;
         default:
-          $(this).find('span.lic-cc').addClass('sel');
-          $(this).find('span.lic-cc-by').addClass('sel');
+          $(this).find('span.avkl-cc').addClass('sel');
+          $(this).find('span.avkl-cc-by').addClass('sel');
           break;
       }
       thisselector.find('div.license').html(makeinfo);
@@ -74,9 +74,9 @@
           $(this).siblings('span.item').removeClass('sel');
           $(this).addClass('sel');
           
-          if ($(this).is('span.lic-cc')) {
+          if ($(this).is('span.avkl-cc')) {
             thisselector.find('.avklicensor-lic').after(ccsubshtml);
-            thisselector.find('.lic-cc-by').addClass('sel');;
+            thisselector.find('.avkl-cc-by').addClass('sel');;
           } else {
             thisselector.find('div.avklicensor-sub').remove();
           }
@@ -84,9 +84,15 @@
         thisselector.find('div.license').html(makeinfo);
       });
 
+<<<<<<< Updated upstream
       thisselector.on('click', 'div.avklicensor-sub span.item:not(".lic-cc-by")', function(){
         if ($(this).is('.lic-cc-sa')) thisselector.find('.lic-cc-nd').removeClass('sel');
         if ($(this).is('.lic-cc-nd')) thisselector.find('.lic-cc-sa').removeClass('sel');
+=======
+      thisselector.on('click', 'div.avklicensor-sub span.item:not(".avkl-cc-by")', function(){
+        if ($(this).is('.avkl-cc-sa')) thisselector.find('.avkl-cc-nd').removeClass('sel');
+        if ($(this).is('.avkl-cc-nd')) thisselector.find('.avkl-cc-sa').removeClass('sel');
+>>>>>>> Stashed changes
         $(this).toggleClass('sel');
         thisselector.find('div.license').html(makeinfo);
       });      
@@ -95,7 +101,7 @@
       var code = '<div class = "avklicensor-lic">';
         
       for (var i=0; i<options.types.length; i++) {
-        code+='<span class="item lic-'+options.types[i].toLowerCase()+'" title="'+options.lang[options.types[i].toLowerCase()]+'"></span>';
+        code+='<span class="item avkl-'+options.types[i].toLowerCase()+'" title="'+options.lang[options.types[i].toLowerCase()]+'"></span>';
       }
 
       code +='</div>';
@@ -105,7 +111,11 @@
       var code = '<div class = "avklicensor-sub" id="ccsub">';
 
       for (var i=0; i<options.ccsubs.length; i++) {
+<<<<<<< Updated upstream
         code+='<span class="item lic-'+options.ccsubs[i].toLowerCase()+'" title="'+options.lang[options.ccsubs[i].toLowerCase()]+'"></span>';
+=======
+        code+='<span class="item avkl-'+options.ccsubs[i].toLowerCase()+'" title="'+options.lang[options.ccsubs[i].toLowerCase()]+'"></span>';
+>>>>>>> Stashed changes
       }        
         
       code +='</div>';
