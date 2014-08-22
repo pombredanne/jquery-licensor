@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: "avk-licensor";
-  src:url("fonts/avk-licensor.eot");
+  src:url("../fonts/avk-licensor.eot");
   src: local('☺'),
-    url("fonts/avk-licensor.eot?#iefix") format("embedded-opentype"),
-    url("fonts/avk-licensor.woff") format("woff"),
-    url("fonts/avk-licensor.ttf") format("truetype"),
-    url("fonts/avk-licensor.svg#avk-licensor") format("svg");
+    url("../fonts/avk-licensor.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/avk-licensor.woff") format("woff"),
+    url("../fonts/avk-licensor.ttf") format("truetype"),
+    url("../fonts/avk-licensor.svg#avk-licensor") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -76,6 +76,11 @@
   content: "l";
 }
 
+[class^="avkl-"].sel,
+[class*=" avkl-"].sel{
+    color: #1e93bf;
+}
+
 div.avklicensor div{text-align: center;}
 div.avklicensor div span{
     color: #e5e5e5;
@@ -93,3 +98,4 @@ div.avklicensor div.license{
     width: 100%;
 }
 div.avklicensor div.license a{text-decoration: none;}
+

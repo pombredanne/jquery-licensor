@@ -1,26 +1,31 @@
 ;(function($){
   jQuery.fn.avklicensor = function(options){
     options = $.extend({
-        types: ['c', 'cc', 'cc-zero'],
-        ccsubs: ['cc-by', 'cc-nc', 'cc-sa', 'cc-nd'],
+        types: ['c', 'cc', 'cczero'],
+        ccsubs: ['ccby', 'ccnc', 'ccsa', 'ccnd'],
         current: 'CCBY',
-        locale: 'ru',
+        locale: 'en',
         lang: null,
     }, options);
     
     var thisselector = this,
     
-    make = function(){
-      $.ajax({
-        type: "GET",
-        url: "/vendor/avklicensor/lang/"+options.locale+".js",
-        dataType: "script",
-        async: false,
-        cache: true,
-        success: function(data){
-          options.lang = AVKLICENSORLOCALE;
+    make = function(){   
+    
+        if (typeof AVKLICENSORLOCALE == "undefined") {
+            $.ajax({
+                type: "GET",
+                url: "lang/"+options.locale+".js",
+                dataType: "script",
+                async: false,
+                cache: true,
+                success: function(data){
+                  options.lang = AVKLICENSORLOCALE;
+                }
+              });    
+        } else {
+            options.lang = AVKLICENSORLOCALE;
         }
-      });
         
       $(this).addClass('avklicensor').append(typeshtml).append(ccsubshtml).append(infohtml);
 
@@ -30,41 +35,41 @@
           break;
         case 'ccby':
           $(this).find('span.avkl-cc').addClass('sel');
-          $(this).find('span.avkl-cc-by').addClass('sel');
+          $(this).find('span.avkl-ccby').addClass('sel');
           break;
         case 'ccbysa':
           $(this).find('span.avkl-cc').addClass('sel');
-          $(this).find('span.avkl-cc-by').addClass('sel');
-          $(this).find('span.avkl-cc-sa').addClass('sel');
+          $(this).find('span.avkl-ccby').addClass('sel');
+          $(this).find('span.avkl-ccsa').addClass('sel');
           break;
         case 'ccbynd':
           $(this).find('span.avkl-cc').addClass('sel');
-          $(this).find('span.avkl-cc-by').addClass('sel');
-          $(this).find('span.avkl-cc-nd').addClass('sel');
+          $(this).find('span.avkl-ccby').addClass('sel');
+          $(this).find('span.avkl-ccnd').addClass('sel');
           break;
         case 'ccbync':
           $(this).find('span.avkl-cc').addClass('sel');
-          $(this).find('span.avkl-cc-by').addClass('sel');
-          $(this).find('span.avkl-cc-nc').addClass('sel');
+          $(this).find('span.avkl-ccby').addClass('sel');
+          $(this).find('span.avkl-ccnc').addClass('sel');
           break;
         case 'ccbyncsa':
           $(this).find('span.avkl-cc').addClass('sel');
-          $(this).find('span.avkl-cc-by').addClass('sel');
-          $(this).find('span.avkl-cc-nc').addClass('sel');
-          $(this).find('span.avkl-cc-sa').addClass('sel');
+          $(this).find('span.avkl-ccby').addClass('sel');
+          $(this).find('span.avkl-ccnc').addClass('sel');
+          $(this).find('span.avkl-ccsa').addClass('sel');
           break;
         case 'ccbyncnd':
           $(this).find('span.avkl-cc').addClass('sel');
-          $(this).find('span.avkl-cc-by').addClass('sel');
-          $(this).find('span.avkl-cc-nc').addClass('sel');
-          $(this).find('span.avkl-cc-nd').addClass('sel');
+          $(this).find('span.avkl-ccby').addClass('sel');
+          $(this).find('span.avkl-ccnc').addClass('sel');
+          $(this).find('span.avkl-ccnd').addClass('sel');
           break;
         case 'cczero':
-          $(this).find('span.avkl-cc-zero').addClass('sel');
+          $(this).find('span.avkl-cczero').addClass('sel');
           break;
         default:
           $(this).find('span.avkl-cc').addClass('sel');
-          $(this).find('span.avkl-cc-by').addClass('sel');
+          $(this).find('span.avkl-ccby').addClass('sel');
           break;
       }
       thisselector.find('div.license').html(makeinfo);
@@ -76,7 +81,7 @@
           
           if ($(this).is('span.avkl-cc')) {
             thisselector.find('.avklicensor-lic').after(ccsubshtml);
-            thisselector.find('.avkl-cc-by').addClass('sel');;
+            thisselector.find('.avkl-ccby').addClass('sel');;
           } else {
             thisselector.find('div.avklicensor-sub').remove();
           }
@@ -84,15 +89,9 @@
         thisselector.find('div.license').html(makeinfo);
       });
 
-<<<<<<< Updated upstream
-      thisselector.on('click', 'div.avklicensor-sub span.item:not(".lic-cc-by")', function(){
-        if ($(this).is('.lic-cc-sa')) thisselector.find('.lic-cc-nd').removeClass('sel');
-        if ($(this).is('.lic-cc-nd')) thisselector.find('.lic-cc-sa').removeClass('sel');
-=======
-      thisselector.on('click', 'div.avklicensor-sub span.item:not(".avkl-cc-by")', function(){
-        if ($(this).is('.avkl-cc-sa')) thisselector.find('.avkl-cc-nd').removeClass('sel');
-        if ($(this).is('.avkl-cc-nd')) thisselector.find('.avkl-cc-sa').removeClass('sel');
->>>>>>> Stashed changes
+      thisselector.on('click', 'div.avklicensor-sub span.item:not(".avkl-ccby")', function(){
+        if ($(this).is('.avkl-ccsa')) thisselector.find('.avkl-ccnd').removeClass('sel');
+        if ($(this).is('.avkl-ccnd')) thisselector.find('.avkl-ccsa').removeClass('sel');
         $(this).toggleClass('sel');
         thisselector.find('div.license').html(makeinfo);
       });      
@@ -111,11 +110,7 @@
       var code = '<div class = "avklicensor-sub" id="ccsub">';
 
       for (var i=0; i<options.ccsubs.length; i++) {
-<<<<<<< Updated upstream
-        code+='<span class="item lic-'+options.ccsubs[i].toLowerCase()+'" title="'+options.lang[options.ccsubs[i].toLowerCase()]+'"></span>';
-=======
         code+='<span class="item avkl-'+options.ccsubs[i].toLowerCase()+'" title="'+options.lang[options.ccsubs[i].toLowerCase()]+'"></span>';
->>>>>>> Stashed changes
       }        
         
       code +='</div>';
