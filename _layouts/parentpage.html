@@ -1,0 +1,17 @@
+{% include header.html %}
+<span class="background avkl-{{ page.thisitem }}"></span>
+    {{ content }}
+
+<div class="block-children">
+    <div>
+        <span class="avkl-{{ page.thisitem }}"></span>    
+    </div>
+    &darr;
+    <div>
+        {% for child in page.childrenpages %}
+            <a href="/{{ page.lang }}/{{ child }}.html"><span class="avkl-{{ child }}"></span></a>
+        {% endfor %}        
+    </div>
+</div>
+
+{% include footer.html %}

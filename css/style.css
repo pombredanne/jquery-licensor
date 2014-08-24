@@ -1,0 +1,123 @@
+@import url('reset.css');
+@import url(http://fonts.googleapis.com/css?family=Spinnaker);
+
+html, body {
+    height: 100%;
+    margin: 0;
+    min-width: 1000px;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #708090;
+}
+.header a, .footer a{color: #fff;}
+a:hover{
+    color: #24415E;
+}
+.background{
+    color: #f8f8f8;
+    position: fixed;
+    font-size: 1000px;
+    right: -150px;
+    top: -150px;
+    z-index: -100;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 0 -150px 0;
+    padding: 0;
+}
+
+ul.horizontal li{
+    display: inline;
+    margin: 0 10px;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif
+}
+.header{
+    background-color: #708090;
+    height: 130px;
+    padding: 15px;
+    position: relative;
+}
+.header ul.nav{
+    clear: both;
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+}
+.footer ul.nav{
+
+
+}
+.nav a{
+    color: #fff;
+}
+.logo{
+    font-family: 'Spinnaker', Arial, sans-serif;
+    font-size: 82px;
+    color: #fff;
+}
+.logo div.slogan{
+    font-size: 35px;
+}
+.logo a, .logo a:hover{
+    color: #fff!important;
+}
+.site{
+    margin: 20px auto;
+    width: 1000px;
+    
+}
+
+.footer-push, .footer{
+    height: 150px;
+    margin: 0;
+    padding: 0;
+
+}
+.footer{
+    background-color: #708090;
+    border-top: 1px solid #A6B7C8;
+}
+.footercontent{
+    display: block;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    width: 1000px;
+}
+.footermnu{
+    float: left;
+    position: absolute;
+    bottom: 100px;
+}
+.footerinfo{
+    float: right;
+    font-size: 11px;
+    margin: 15px;
+    width: 200px;
+}
+.footerinfo p{
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 150%;
+}
+.footercontent a{
+    margin-bottom: 10px;
+    line-height: 150%;
+}
+
+.block-children{
+    color: #708090;
+    font-size: 80px;
+    text-align: center;
+}

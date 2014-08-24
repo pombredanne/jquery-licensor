@@ -1,22 +1,23 @@
 ---
 layout: parentpage
-title: "Лицензия Creative Commons"
+title: "RARS"
 lang: ru
 categories:
     - ru
 thisitem:
-    - cc
+    - rars0
 childrenpages:
-    - ccby
-    - ccnc
-    - ccnd
-    - ccsa
+    - rars0
+    - rars6
+    - rars12
+    - rars16
+    - rars18
 type: license
 freedom_level: somelimits
 country: worldwide
 content_type: mixed audio video image text dataset interactive
 ---
 
-Лицензия Creative Commons
+Лицензия RARS
 =========================
 

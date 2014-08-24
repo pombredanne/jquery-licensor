@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>{{ page.title }}</title>
+        <meta name="author" content="Andrey Kryukov" />
+
+        <!-- Homepage CSS -->
+        <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="/vendor/jquery.licensor/css/jquery.avklicensor.css" type="text/css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                {% include nav.html %}
+                <div class="logo">
+                    <a href="/{{ page.lang }}/index.html">LICENS<span id="logolic" class="ccby"></span>R</a>
+                    <div class="slogan">Content License Collection</div>
+                </div>
+            </div>
+            <div class="site">            
