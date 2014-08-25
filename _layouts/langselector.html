@@ -6,14 +6,12 @@
         <meta name="author" content="Andrey Kryukov" />
 
         <!-- Homepage CSS -->
-        <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" />
-        <link rel="stylesheet" href="/vendor/jquery.licensor/css/jquery.avklicensor.css" type="text/css" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/vendor/jquery.licensor/css/jquery.avklicensor.css" type="text/css" />
     </head>
     <body>
         <div class="wrapper">
             <div class="header">
-                {% include nav.html %}
-                     
                 <div class="logo">
                     <a href="/{{ page.lang }}/index.html">LICENS<span id="logolic" class="ccby"></span>R</a>
                     <div class="slogan">Content License Collection</div>
@@ -44,9 +42,9 @@
         </div>
         </div>
         
-        <script src="/vendor/jquery/jquery-1.10.2.min.js"></script>
-        <script src="/vendor/velocity/jquery.velocity.min.js"></script>
-        <script src="/js/script.js"></script>
+        <script src="{{ site.baseurl }}/vendor/jquery/jquery-1.10.2.min.js"></script>
+        <script src="{{ site.baseurl }}/vendor/velocity/jquery.velocity.min.js"></script>
+        <script src="{{ site.baseurl }}/js/script.js"></script>
 
     </body>
 </html>
