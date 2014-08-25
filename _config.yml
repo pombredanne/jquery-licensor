@@ -1,2 +1,2 @@
-permalink: /:title.html
+permalink: /:categories/:title.html
 baseurl: /jquery-licensor
