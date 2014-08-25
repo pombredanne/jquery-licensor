@@ -1,1 +1,2 @@
-permalink: /jquery-licensor
+baseurl: /jquery-licensor
+permalink: /:title.html
