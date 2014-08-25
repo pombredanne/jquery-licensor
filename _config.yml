@@ -1,2 +1,2 @@
-baseurl: /jquery-licensor
 permalink: /:title.html
+baseurl: "/jquery-licensor"
