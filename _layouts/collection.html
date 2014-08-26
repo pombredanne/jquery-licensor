@@ -1,0 +1,11 @@
+{% include header.html %}
+
+<h3>Коллекция лицензий</h3>
+<div class="block-children">
+{% for item in site.data.items %}
+    <a href="{{ site.baseurl }}/{{ page.lang }}/{{ item.id }}.html"><span class="avkl-{{ item.id }}" title="{{ item.name }}"></span></a>
+{% endfor %}
+</div>
+
+    {{ content }}
+{% include footer.html %}

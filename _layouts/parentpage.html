@@ -4,14 +4,23 @@
 
 <div class="block-children">
     <div>
-        <span class="avkl-{{ page.thisitem }}"></span>    
+        <span class="avkl-{{ page.thisitem }} item sel"></span>    
     </div>
     &darr;
     <div>
         {% for child in page.childrenpages %}
-            <a href="/{{ page.lang }}/{{ child }}.html"><span class="avkl-{{ child }}"></span></a>
+            <a href="{{ site.baseurl }}/{{ page.lang }}/{{ child }}.html"><span class="avkl-{{ child }} item"></span></a>
         {% endfor %}        
     </div>
+</div>
+
+<h3>Ссылки</h3>
+<div class="block-links">
+    <ul>
+        {% for link in page.links %}
+            <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></li>
+        {% endfor %}        
+    </ul>
 </div>
 
 {% include footer.html %}

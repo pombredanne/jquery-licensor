@@ -6,41 +6,20 @@
         <meta name="author" content="Andrey Kryukov" />
 
         <!-- Homepage CSS -->
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/langsel.css" type="text/css" media="screen, projection" />
         <link rel="stylesheet" href="{{ site.baseurl }}/vendor/jquery.licensor/css/jquery.avklicensor.css" type="text/css" />
     </head>
     <body>
-        <div class="wrapper">
-            <div class="header">
-                <div class="logo" style="cursor: default;">
+
+                <div class="logo " style="cursor: default;">
                     LICENS<span id="logolic" class="ccby"></span>R
                     <div class="slogan">Content License Collection</div>
                 </div>
-            </div>
-            <div class="site">            
+           
 
 {{ content }}
 
-            </div>
-            <div class="footer-push"></div>
-        </div>
 
-        <div class="footer">
-        <div class="footercontent">
-            <div class="footermnu">
-                {% include nav.html %}
-            </div>
-            <div class="footerinfo">
-                <p>
-                    <a rel="license" href="//creativecommons.org/licenses/by/4.0/" title="Creative Commons Attribution 4.0 International license"><img src="//i.creativecommons.org/l/by/4.0/88x31.png" alt="License"></a>
-                </p>        
-                <p>
-                    Except where otherwise noted, content on this site is licensed under a
-                    <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>.
-                </p>
-            </div>
-        </div>
-        </div>
         
         <script src="{{ site.baseurl }}/vendor/jquery/jquery-1.10.2.min.js"></script>
         <script src="{{ site.baseurl }}/vendor/velocity/jquery.velocity.min.js"></script>

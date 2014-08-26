@@ -1,0 +1,35 @@
+- name: Copyright
+  id: c
+  
+- name: Creative Commons
+  id: cc
+  
+- name: CC Attribution
+  id: ccby
+  
+- name: CC Non Commercial
+  id: ccnc
+  
+- name: CC No Derevatives
+  id: ccnd
+  
+- name: CC Share Alike
+  id: ccsa
+  
+- name: CC Zero
+  id: cczero
+  
+- name: RARS 0+
+  id: rars0
+  
+- name: RARS 6+
+  id: rars6
+  
+- name: RARS 12+
+  id: rars12
+  
+- name: RARS 16+
+  id: rars16
+  
+- name: RARS 18+
+  id: rars18

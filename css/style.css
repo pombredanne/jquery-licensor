@@ -1,11 +1,30 @@
 @import url('reset.css');
-@import url(http://fonts.googleapis.com/css?family=Spinnaker);
+@import url(http://fonts.googleapis.com/css?family=Poiret+One|Spinnaker&subset=latin,cyrillic);
 
 html, body {
+    color: #2F353B;
     height: 100%;
     margin: 0;
     min-width: 1000px;
     padding: 0;
+}
+
+body ul{
+    list-style-type: square;
+    list-style-position: inside;
+    margin: 15px;
+}
+
+h1{
+    font-size: 32px;
+    margin-bottom: 30px;    
+}
+
+h3{
+    border-bottom: 1px solid;
+    font-size: 19px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 a{
@@ -13,7 +32,7 @@ a{
     color: #708090;
 }
 .header a, .footer a{color: #fff;}
-a:hover{
+a:hover, a:hover span.item{
     color: #24415E;
 }
 .background{
@@ -42,10 +61,13 @@ body{
     font-family: Helvetica, Arial, sans-serif
 }
 .header{
-    background-color: #708090;
+    background-color: #C51D34;
     height: 130px;
     padding: 15px;
     position: relative;
+    
+-webkit-box-shadow: 0 -3px 20px 1px rgba(33,33,33,0.4);
+box-shadow: 0 -3px 20px 1px rgba(33,33,33,0.4);    
 }
 .header ul.nav{
     clear: both;
@@ -67,16 +89,21 @@ body{
     color: #fff;
 }
 .logo div.slogan{
-    font-size: 35px;
+    font-size: 42px;
 }
 .logo a, .logo a:hover{
     color: #fff!important;
 }
+
+h1, h2, h3, .logo div.slogan{
+    font-family: 'Poiret One', cursive;
+}
+
 .site{
     margin: 20px auto;
     width: 1000px;
-    
 }
+
 
 .footer-push, .footer{
     height: 150px;
@@ -85,8 +112,11 @@ body{
 
 }
 .footer{
-    background-color: #708090;
+    background-color: #C51D34;
     border-top: 1px solid #A6B7C8;
+    
+    -webkit-box-shadow: 0 3px 20px 1px rgba(33,33,33,0.4);
+    box-shadow: 0 3px 20px 1px rgba(33,33,33,0.4);    
 }
 .footercontent{
     display: block;
@@ -116,8 +146,12 @@ body{
     line-height: 150%;
 }
 
-.block-children{
+span.item, .block-children{
+    text-align: center;
     color: #708090;
     font-size: 80px;
-    text-align: center;
+    text-shadow: 2px 2px 2px silver;    
+}
+span.item.sel{
+    color: #008090;
 }
