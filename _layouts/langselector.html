@@ -8,19 +8,30 @@
         <!-- Homepage CSS -->
         <link rel="stylesheet" href="{{ site.baseurl }}/css/langsel.css" type="text/css" media="screen, projection" />
         <link rel="stylesheet" href="{{ site.baseurl }}/vendor/jquery.licensor/css/jquery.avklicensor.css" type="text/css" />
+        <style>
+                body{
+                    position: relative;
+                }
+                #content{
+                    display: block;
+                    margin: auto;
+                    position: relative;
+                    top: 200px;
+                    width: 500px;
+                    z-index: 999;
+                }
+        </style>
     </head>
     <body>
-
+        
+            <div id="content">
                 <div class="logo " style="cursor: default;">
                     LICENS<span id="logolic" class="ccby"></span>R
                     <div class="slogan">Content License Collection</div>
                 </div>
-           
+                {{ content }}
+            </div>
 
-{{ content }}
-
-
-        
         <script src="{{ site.baseurl }}/vendor/jquery/jquery-1.10.2.min.js"></script>
         <script src="{{ site.baseurl }}/vendor/velocity/jquery.velocity.min.js"></script>
         <script src="{{ site.baseurl }}/js/script.js"></script>
