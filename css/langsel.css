@@ -1,8 +1,17 @@
 @import url('reset.css');
 @import url(http://fonts.googleapis.com/css?family=Poiret+One|Spinnaker&subset=latin,cyrillic);
 
-body{
-    margin: auto;
+.topline{
+    padding: 5px;
+    background-color: #004953;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Spinnaker', Arial, sans-serif;
+}
+.topline a{
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Spinnaker', Arial, sans-serif;
 }
 
 .logo{
@@ -26,12 +35,25 @@ a{
 a:hover{
     color: #C51D34;
     font-family: 'Poiret One', cursive;
-    font-size: 24px;
     text-decoration: none;
     margin: 15px;
+   -webkit-transition:color 500ms ease-in;
+   -moz-transition:color 500ms ease-in;
+   -o-transition:color 500ms ease-in;
+   transition:color 500ms ease-in;       
 }
 
 .locale-linklist{
     text-align: center;
     margin: 30px;
+}
+
+
+
+.forkme{
+    bottom: 20px;
+    font-family: 'Poiret One', cursive;
+    font-size: 18px;
+    position: fixed;
+    right: 20px;
 }
