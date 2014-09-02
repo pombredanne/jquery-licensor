@@ -5,24 +5,22 @@
         <title>{{ page.title }}</title>
         <meta name="author" content="Andrey Kryukov" />
         <!-- Homepage CSS -->
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/langsel.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" type="text/css" media="screen, projection" />
         <link rel="stylesheet" href="{{ site.baseurl }}/vendor/jquery.licensor/css/jquery.avklicensor.css" type="text/css" />
     </head>
     <body>
-        <div class=topline>
-            <a href="#">Andrey Kryukov</a>
-            &rarr;
-            <a href="#">Licensor</a>
-        </div>
+        {% include topline.html %}
         <div class="content">
-            <div class="logo " style="cursor: default;">
+            <div class="logo-langsel" style="cursor: default;">
                 LICENS<span id="logolic" class="ccby"></span>R
                 <div class="slogan">Content License Collection</div>
+                <div class="langs">{{ content }}</div>
             </div>
-            {{ content }}    
-        </div>
-    
+            
+
         <a class="forkme" href="https://github.com/avknor/jquery-licensor">Fork Me on GitHub</a>
+        </div>    
+
         
         <script src="{{ site.baseurl }}/vendor/jquery/jquery-1.10.2.min.js"></script>
         <script src="{{ site.baseurl }}/js/script.js"></script>

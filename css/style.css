@@ -1,51 +1,18 @@
 @import url('reset.css');
 @import url(http://fonts.googleapis.com/css?family=Poiret+One|Spinnaker&subset=latin,cyrillic);
 
+
+/**
+ * Main elements styles
+ */
 html, body {
     color: #2F353B;
+    font-family: Helvetica, Arial, sans-serif;
     height: 100%;
     margin: 0;
     min-width: 1000px;
     padding: 0;
 }
-
-body ul{
-    list-style-type: square;
-    list-style-position: inside;
-    margin: 15px;
-}
-
-h1{
-    font-size: 32px;
-    margin-bottom: 30px;    
-}
-
-h3{
-    border-bottom: 1px solid;
-    font-size: 19px;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-a{
-    text-decoration: none;
-    color: #708090;
-}
-.header a, .footer a{color: #fff;}
-a:hover, a:hover span.item{
-    color: #24415E;
-
- 
-}
-.background{
-    color: #f8f8f8;
-    position: fixed;
-    font-size: 1000px;
-    right: -150px;
-    top: -150px;
-    z-index: -100;
-}
-
 .wrapper {
     min-height: 100%;
     height: auto !important;
@@ -53,76 +20,150 @@ a:hover, a:hover span.item{
     margin: 0 0 -150px 0;
     padding: 0;
 }
-
-ul.horizontal li{
-    display: inline;
-    margin: 0 10px;
-}
-
-body{
-    font-family: Helvetica, Arial, sans-serif
-}
-.header{
-    background-color: #C51D34;
-    height: 130px;
-    padding: 15px;
-    position: relative;
-    
--webkit-box-shadow: 0 -3px 20px 1px rgba(33,33,33,0.4);
-box-shadow: 0 -3px 20px 1px rgba(33,33,33,0.4);    
-}
-.header ul.nav{
-    clear: both;
-    display: block;
-    position: absolute;
-    right: 30px;
-    bottom: 15px;
-}
-.footer ul.nav{
-
-
-}
-.nav a{
-    color: #fff;
-}
-.logo{
-    font-family: 'Spinnaker', Arial, sans-serif;
-    font-size: 82px;
-    color: #fff;
-}
-.logo div.slogan{
-    font-size: 41px;
-}
-.logo a, .logo a:hover{
-    color: #fff!important;
-}
-
-h1, h2, h3, .logo div.slogan{
-    font-family: 'Poiret One', cursive;
-}
-
 .site{
     margin: 20px auto;
     width: 1000px;
 }
 
-
-.footer-push, .footer{
-    height: 150px;
-    margin: 0;
-    padding: 0;
-
+/**
+ * Topline dsgn
+ */
+.topline{
+    background-color: #67C2B0;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Spinnaker', Arial, sans-serif;
+    padding: 10px;
 }
+
+/**
+ * Header dsgn
+ */
+.header{
+    -webkit-box-shadow: 0 -3px 20px 1px rgba(33,33,33,0.4);
+    background-color: #C51D34;
+    box-shadow: 0 -3px 20px 1px rgba(33,33,33,0.4);    
+    height: 130px;
+    padding: 15px;
+    position: relative;
+}
+.header ul.nav{
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+}
+
+/****
+ * Links dsgn
+ **/
+a{
+    color: #008090; 
+    text-decoration: none;
+}
+a:hover{
+   -webkit-transition:color 500ms ease-in;
+   -moz-transition:color 500ms ease-in;
+   -o-transition:color 500ms ease-in;
+   transition:color 500ms ease-in;    
+}
+.site a,
+.logo-langsel a,
+.forkme
+{
+    font-family: 'Poiret One', cursive;
+}
+
+.topline a,
+.nav a,
+.header a,
+.footer a{
+    color: #fff;
+}
+
+.langs a{
+    color: #2F353B;
+    font-size: 24px;
+    margin: 15px;    
+    text-decoration: none;
+}
+
+.topline a:hover{color: #065646;}
+.langs a:hover,
+.forkme:hover{color: #13846E;}
+.nav a:hover,
+.footer a:hover{color: #008090;}
+
+.logo a, .logo a:hover{color: #fff;}
+
+/****
+ * Logo dsgn
+ **/
+.logo a, .logo-langsel{
+    font-family: 'Spinnaker', Arial, sans-serif;
+    font-size: 82px;
+}
+.logo div.slogan, .logo-langsel div.slogan{
+    font-family: 'Poiret One', cursive;
+    font-size: 42px;
+}
+
+.logo{color: #fff;}
+.logo-langsel{color: #C51D34; text-align: center; margin-top: 200px;}
+
+
+/***
+ * Typography
+ **/
+h1, h2, h3{font-family: 'Poiret One', cursive;}
+h1{
+    font-size: 32px;
+    margin-bottom: 30px;    
+}
+h3{
+    border-bottom: 1px solid;
+    font-size: 19px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.site ul{
+    list-style-type: square;
+    list-style-position: inside;
+    margin: 15px;
+}
+ul.horizontal li{
+    display: inline;
+    margin: 0 10px;
+}
+
+/**
+ * License map dsgn
+ */
+span.item, .block-children{
+    text-align: center;
+    color: #708090;
+    font-size: 80px;
+    text-shadow: 2px 2px 2px silver;    
+}
+span.item.sel{
+    color: #008090;
+}
+
+
+/**
+ * Footer dsgn
+ */
+.footer-push, .footer{height: 150px;}
 .footer{
+    -webkit-box-shadow: 0 3px 20px 1px rgba(33,33,33,0.4);
     background-color: #C51D34;
     border-top: 1px solid #A6B7C8;
-    
-    -webkit-box-shadow: 0 3px 20px 1px rgba(33,33,33,0.4);
-    box-shadow: 0 3px 20px 1px rgba(33,33,33,0.4);    
+    box-shadow: 0 3px 20px 1px rgba(33,33,33,0.4);
 }
 .footercontent{
     display: block;
-    height: 100%;
     margin: auto;
     position: relative;
     width: 1000px;
@@ -130,7 +171,11 @@ h1, h2, h3, .logo div.slogan{
 .footermnu{
     float: left;
     position: absolute;
-    bottom: 100px;
+    top: 50px;
+    width: 750px;
+}
+.footermnu .nav{
+    
 }
 .footerinfo{
     float: right;
@@ -143,17 +188,23 @@ h1, h2, h3, .logo div.slogan{
     margin-bottom: 10px;
     line-height: 150%;
 }
-.footercontent a{
-    margin-bottom: 10px;
-    line-height: 150%;
-}
 
-span.item, .block-children{
-    text-align: center;
-    color: #708090;
-    font-size: 80px;
-    text-shadow: 2px 2px 2px silver;    
+
+/**
+ * Others dsgn
+ */
+
+.forkme{
+    bottom: 20px;
+    font-size: 14px;
+    position: fixed;
+    right: 20px;
 }
-span.item.sel{
-    color: #008090;
+.background{
+    color: #f8f8f8;
+    position: fixed;
+    font-size: 1000px;
+    right: -150px;
+    top: -150px;
+    z-index: -100;
 }
