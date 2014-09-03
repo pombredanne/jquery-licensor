@@ -39,13 +39,12 @@ html, body {
 /**
  * Header dsgn
  */
-.header{
-    -webkit-box-shadow: 0 -3px 20px 1px rgba(33,33,33,0.4);
-    background-color: #C51D34;
-    box-shadow: 0 -3px 20px 1px rgba(33,33,33,0.4);    
+.header{    
     height: 130px;
+    margin: auto;
     padding: 15px;
     position: relative;
+    width: 1000px;
 }
 .header ul.nav{
     display: block;
@@ -68,16 +67,14 @@ a:hover{
    transition:color 500ms ease-in;    
 }
 .site a,
-.logo-langsel a,
-.forkme
+.forkme,
+.langs a
 {
     font-family: 'Poiret One', cursive;
 }
 
 .topline a,
-.nav a,
-.header a,
-.footer a{
+.header a{
     color: #fff;
 }
 
@@ -94,23 +91,14 @@ a:hover{
 .nav a:hover,
 .footer a:hover{color: #008090;}
 
-.logo a, .logo a:hover{color: #fff;}
+.logo a, .logo a:hover, .nav a, .footer a{color: #C51D34;}
 
 /****
  * Logo dsgn
  **/
-.logo a, .logo-langsel{
-    font-family: 'Spinnaker', Arial, sans-serif;
-    font-size: 82px;
-}
-.logo div.slogan, .logo-langsel div.slogan{
-    font-family: 'Poiret One', cursive;
-    font-size: 42px;
-}
-
-.logo{color: #fff;}
-.logo-langsel{color: #C51D34; text-align: center; margin-top: 200px;}
-
+.logo a{font-family: 'Spinnaker', Arial, sans-serif;font-size: 82px;}
+.logo div.slogan{font-family: 'Poiret One', cursive;font-size: 42px;}
+.logo{color: #C51D34;}
 
 /***
  * Typography
@@ -144,8 +132,7 @@ ul.horizontal li{
 span.item, .block-children{
     text-align: center;
     color: #708090;
-    font-size: 80px;
-    text-shadow: 2px 2px 2px silver;    
+    font-size: 80px;    
 }
 span.item.sel{
     color: #008090;
@@ -156,12 +143,7 @@ span.item.sel{
  * Footer dsgn
  */
 .footer-push, .footer{height: 150px;}
-.footer{
-    -webkit-box-shadow: 0 3px 20px 1px rgba(33,33,33,0.4);
-    background-color: #C51D34;
-    border-top: 1px solid #A6B7C8;
-    box-shadow: 0 3px 20px 1px rgba(33,33,33,0.4);
-}
+.footer{background-color: #fff;}
 .footercontent{
     display: block;
     margin: auto;
@@ -184,7 +166,6 @@ span.item.sel{
     width: 200px;
 }
 .footerinfo p{
-    color: #fff;
     margin-bottom: 10px;
     line-height: 150%;
 }

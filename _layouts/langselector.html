@@ -11,11 +11,8 @@
     <body>
         {% include topline.html %}
         <div class="content">
-            <div class="logo-langsel" style="cursor: default;">
-                LICENS<span id="logolic" class="ccby"></span>R
-                <div class="slogan">Content License Collection</div>
-                <div class="langs">{{ content }}</div>
-            </div>
+            {% include logo.html %}
+            <div class="langs">{{ content }}</div>
             
 
         <a class="forkme" href="https://github.com/avknor/jquery-licensor">Fork Me on GitHub</a>
